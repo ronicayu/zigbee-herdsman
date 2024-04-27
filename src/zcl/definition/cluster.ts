@@ -5753,7 +5753,7 @@ const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>> = {
         commands: {},
         commandsResponse: {},
     },
-    manuSpecificEByte: {
+    64520: {
         ID: 0xfc08,
         manufacturerCode: ManufacturerCode.EBYTE,
         attributes: {
