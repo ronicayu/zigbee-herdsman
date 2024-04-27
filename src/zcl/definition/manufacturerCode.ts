@@ -686,6 +686,7 @@ enum ManufacturerCode {
     BHTRONICS_S_R_L = 0x1369,
     AKUVOX_XIAMEN_NETWORKS_CO_LTD = 0x136A,
     GEWISS_S_P_A = 0x1994,
+    EBYTE = 0x2000,
     CLIMAX_TECHNOLOGY_CO_LTD = 0x2794,
     GOOGLE_LLC = 0x6006,
     CONNECTIVITY_STANDARDS_ALLIANCE = 0xC5A0,
@@ -725,6 +726,7 @@ enum ManufacturerCode {
     CUSTOM_LIVOLO = 0x1AD2,
     CUSTOM_SPRUT_DEVICE = 0x6666,
     CUSTOM_LYTKO = 0x7777,
+    CUSTOM_EBYTE = 0x8888,
 };
 
 export default ManufacturerCode;

@@ -5753,6 +5753,16 @@ const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>> = {
         commands: {},
         commandsResponse: {},
     },
+    manuSpecificEByte: {
+        ID: 0xfc08,
+        manufacturerCode: ManufacturerCode.EBYTE,
+        attributes: {
+            data1: {ID: 0x0003, type: DataType.uint8},
+            data2: {ID: 0x0004, type: DataType.uint8},
+        },
+        commands: {},
+        commandsResponse: {},
+    },
     manuSpecificAmazonWWAH: {
         ID: 0xfc57,
         manufacturerCode: ManufacturerCode.AMAZON_LAB126,
