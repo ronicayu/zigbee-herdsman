@@ -5529,11 +5529,25 @@ const Clusters = {
         ID: 0xfc08,
         manufacturerCode: manufacturerCode_1.default.EBYTE,
         attributes: {
-            data1: { ID: 0x0003, type: dataType_1.default.uint8 },
-            data2: { ID: 0x0004, type: dataType_1.default.uint8 },
+            sendMode: { ID: 0x0003, type: dataType_1.default.boolean },
+            lpLevel: { ID: 0x0004, type: dataType_1.default.enum8 },
         },
-        commands: {},
-        commandsResponse: {},
+        commands: {
+            SetLP_Level: {
+                ID: 0x03,
+                parameters: [
+                    { name: 'level', type: dataType_1.default.uint8 },
+                ],
+            },
+        },
+        commandsResponse: {
+            SetLP_LevelRsp: {
+                ID: 0x03,
+                parameters: [
+                    { name: 'level', type: dataType_1.default.uint8 },
+                ],
+            },
+        },
     },
     manuSpecificAmazonWWAH: {
         ID: 0xfc57,

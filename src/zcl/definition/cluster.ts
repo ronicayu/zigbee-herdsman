@@ -5760,7 +5760,8 @@ const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>> = {
             sendMode: {ID: 0x0003, type: DataType.boolean},
             lpLevel: {ID: 0x0004, type: DataType.enum8},
         },
-        commands: {SetLP_Level: {
+        commands: {
+            SetLP_Level: {
                 ID: 0x03,
                 parameters: [
                     {name: 'level', type: DataType.uint8},
@@ -5774,7 +5775,6 @@ const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>> = {
                     {name: 'level', type: DataType.uint8},
                 ],
             },
-            }
         },
     },
     manuSpecificAmazonWWAH: {
