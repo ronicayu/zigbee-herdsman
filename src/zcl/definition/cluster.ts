@@ -5761,15 +5761,27 @@ const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>> = {
             lpLevel: {ID: 0x0004, type: DataType.enum8},
         },
         commands: {
-            SetLP_Level: {
+            setLpLevel: {
                 ID: 0x03,
                 parameters: [
                     {name: 'level', type: DataType.uint8},
                 ],
             },
+            uartSend: {
+                ID: 0x00,
+                parameters: [
+                    {name: 'data', type: DataType.array},
+                ],
+            },
         },        
         commandsResponse: {
-            SetLP_LevelRsp: {
+            uartNotify: {
+                ID: 0x00,
+                parameters: [
+                    {name: 'data', type: DataType.array},
+                ],
+            },
+            setLpLevelRsp: {
                 ID: 0x03,
                 parameters: [
                     {name: 'level', type: DataType.uint8},
