@@ -5533,15 +5533,27 @@ const Clusters = {
             lpLevel: { ID: 0x0004, type: dataType_1.default.enum8 },
         },
         commands: {
-            SetLP_Level: {
+            setLpLevel: {
                 ID: 0x03,
                 parameters: [
                     { name: 'level', type: dataType_1.default.uint8 },
                 ],
             },
+            uartSend: {
+                ID: 0x00,
+                parameters: [
+                    { name: 'data', type: dataType_1.default.array },
+                ],
+            },
         },
         commandsResponse: {
-            SetLP_LevelRsp: {
+            uartNotify: {
+                ID: 0x00,
+                parameters: [
+                    { name: 'data', type: dataType_1.default.array },
+                ],
+            },
+            setLpLevelRsp: {
                 ID: 0x03,
                 parameters: [
                     { name: 'level', type: dataType_1.default.uint8 },
