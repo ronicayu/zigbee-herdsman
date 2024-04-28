@@ -5757,11 +5757,25 @@ const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>> = {
         ID: 0xfc08,
         manufacturerCode: ManufacturerCode.EBYTE,
         attributes: {
-            data1: {ID: 0x0003, type: DataType.uint8},
-            data2: {ID: 0x0004, type: DataType.uint8},
+            data1: {ID: 0x0003, type: DataType.boolean},
+            data2: {ID: 0x0004, type: DataType.enum8},
         },
-        commands: {},
-        commandsResponse: {},
+        commands: {SetLP_Level: {
+                ID: 0x03,
+                parameters: [
+                    {name: 'level', type: DataType.uint8},
+                ],
+            },
+        },        
+        commandsResponse: {
+            SetLP_LevelRsp: {
+                ID: 0x03,
+                parameters: [
+                    {name: 'level', type: DataType.uint8},
+                ],
+            },
+            }
+        },
     },
     manuSpecificAmazonWWAH: {
         ID: 0xfc57,
