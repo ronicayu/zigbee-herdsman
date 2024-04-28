@@ -5757,8 +5757,8 @@ const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>> = {
         ID: 0xfc08,
         manufacturerCode: ManufacturerCode.EBYTE,
         attributes: {
-            data1: {ID: 0x0003, type: DataType.boolean},
-            data2: {ID: 0x0004, type: DataType.enum8},
+            sendMode: {ID: 0x0003, type: DataType.boolean},
+            lpLevel: {ID: 0x0004, type: DataType.enum8},
         },
         commands: {SetLP_Level: {
                 ID: 0x03,
